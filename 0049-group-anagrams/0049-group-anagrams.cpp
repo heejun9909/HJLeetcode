@@ -92,7 +92,7 @@ public:
         vector<vector<string>> ans;
         for(auto y:mp)
         {
-            ans.push_back(x.second);
+            ans.push_back(y.second);
         }
         return ans;
     }
