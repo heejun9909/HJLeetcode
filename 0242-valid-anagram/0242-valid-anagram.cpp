@@ -80,7 +80,7 @@ public:
         // Make an array that can hold the number of alphabets from a ~ z
         vector<int> alphabet_arr(26);
 
-        for(int i = 0; i < s.size(); i++
+        for(int i = 0; i < s.size(); i++)
         {
             // if s[i] is 'c', c - a is 2, so the area of index 2 in alphabet_arr will be increased by 1
             alphabet_arr[s[i] - 'a']++;
