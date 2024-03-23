@@ -1,3 +1,5 @@
+// Idea is to evaluate two uppermost values in the stack whenever an operator (+,-,/,*) is encountered
+// evaluate according to the operator and push the result back to the stack
 class Solution {
 public:
     int evalRPN(vector<string>& tokens) {
