@@ -1,13 +1,15 @@
+// Idea is to make an extra stack for maintaining the min values at each stage
+// whenever a value is pushed, check whether that new value is smaller than the min.top() value
+// If new value is smaller, update the min.top() value by pushing the new value to the min stack
+// and if the new value is greater or same as the min.top() value, we push the same min.top() value to the min stack ( min.push(min.top()) )
 class MinStack {
 public:
     stack<int> min;
     vector<int> arr;
     MinStack() {
-        cout << "start" << endl;
     }
     
     void push(int val) {
-        cout << "push" << endl;
         if (arr.size() == 0)
         {
             arr.push_back(val);
@@ -30,14 +32,12 @@ public:
     
     void pop() {
         min.pop();
-        cout << "pop" << endl;
         vector<int>::iterator iter = this->arr.end();
         iter = --iter;
         iter = this->arr.erase(iter);
     }
     
     int top() {
-        cout << "top" << endl;
         vector<int>::iterator iter = this->arr.end();
         iter = --iter;
         int top = *iter;
