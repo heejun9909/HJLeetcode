@@ -1,3 +1,4 @@
+// This is a backtracking algorithm question using stack DS, but it is much clearer when stack is not used
 class Solution {
 public:
     vector<string> ans;
