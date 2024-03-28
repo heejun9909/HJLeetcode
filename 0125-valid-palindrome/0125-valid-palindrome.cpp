@@ -1,3 +1,4 @@
+// This problem is to check for "alphanemerical" palindrome, not just alphabetical palindrome
 class Solution {
 public:
     bool isPalindrome(string s) {
