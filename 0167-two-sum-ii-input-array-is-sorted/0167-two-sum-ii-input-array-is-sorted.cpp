@@ -11,10 +11,14 @@ public:
             {
                 break;
             }
+
+            // Since the array is sorted as increasing order, if the sum is smaller than the target, we can move left pointer to the right to increase the sum
             else if(sum < target)
             {
                 left++;
             }
+
+            // sum is larger thant the target, so move the right pointer to the left to decrease the sum
             else
             {
                 right--;
