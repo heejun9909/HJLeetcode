@@ -8,49 +8,49 @@ public:
 
         // The first solution is about keeping the maxLeft, maxRight arrays for each ith position
 
-        // vector<int> maxLeft(height.size());
-        // vector<int> maxRight(height.size());
+        vector<int> maxLeft(height.size());
+        vector<int> maxRight(height.size());
 
-        // int water = 0;
+        int water = 0;
 
-        // int max = 0;
-        // for(int i = 1; i < height.size(); ++i)
-        // {
-        //     if(height[i - 1] > max)
-        //     {
-        //         max = height[i - 1];
-        //     }
+        int max = 0;
+        for(int i = 1; i < height.size(); ++i)
+        {
+            if(height[i - 1] > max)
+            {
+                max = height[i - 1];
+            }
 
-        //     maxLeft[i] = max;
-        // }
+            maxLeft[i] = max;
+        }
 
-        // max = 0;
-        // for(int i = height.size()-2; i >= 0; --i)
-        // {
-        //     if(height[i + 1] > max)
-        //     {
-        //         max = height[i + 1];
-        //     }
+        max = 0;
+        for(int i = height.size()-2; i >= 0; --i)
+        {
+            if(height[i + 1] > max)
+            {
+                max = height[i + 1];
+            }
 
-        //     maxRight[i] = max;
-        // }
+            maxRight[i] = max;
+        }
         
-        // for(int i = 0; i < height.size(); ++i)
-        // {
-        //     if(min(maxLeft[i], maxRight[i]) <= height[i])
-        //     {
-        //         continue;
-        //     }
-        //     else
-        //     {
-        //         water += min(maxLeft[i], maxRight[i]) - height[i];
-        //     }
-        // }
-        // return water;
+        for(int i = 0; i < height.size(); ++i)
+        {
+            if(min(maxLeft[i], maxRight[i]) <= height[i])
+            {
+                continue;
+            }
+            else
+            {
+                water += min(maxLeft[i], maxRight[i]) - height[i];
+            }
+        }
+        return water;
 
 
 
-        // The second solution is about using two pointers technique
+////////// The second solution is about using two pointers technique ////////////////
         // The trick in this problem is that we actually need to know the
         // min(maxLeft, maxRight) which will be the bottleneck of current position
         // 양 끝에서 더 작은 bottleneck을 가지고 있는 바운더리 바로 앞(전)에서 그 위치에서
