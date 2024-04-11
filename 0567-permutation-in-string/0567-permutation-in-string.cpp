@@ -22,6 +22,9 @@ public:
     }    
 
     bool checkInclusion(string s1, string s2) {
+        // THIS CODE IS WRITTEN BY MYSELF
+        // IT IS WORKABLE BUT VERY INEFFICIENT
+        
         // int winSize = s1.size();
         // sort(s1.begin(), s1.end());
         // string res = "";
